@@ -3,6 +3,8 @@ import 'db_operation.dart';
 
 
 class login_page extends StatefulWidget{
+  const login_page({super.key});
+
   @override
   State<login_page> createState() => _login_pageState();
 }

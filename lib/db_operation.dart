@@ -11,9 +11,9 @@ class DB_OP {
       {required String username,
       required String password,}) async {
     try {
-      var urls = Uri.parse(url + 'login.php');
+      var urls = Uri.parse('${url}login.php');
      // SharedPreferences pref = await SharedPreferences.getInstance();
-      var map = Map<String, dynamic>();
+      var map = <String, dynamic>{};
       map['user'] = username;
       map['password'] = password;
 
@@ -21,7 +21,7 @@ class DB_OP {
       print(data.statusCode);
       print(data.body);
       if (data.statusCode == 200) {
-        print("Response JSON=>" + data.body);
+        print("Response JSON=>${data.body}");
         /*var jsondata = jsonDecode(data.body);
         final List users = jsondata;
         return users;*/
